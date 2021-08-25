@@ -11,7 +11,7 @@
 	let myBulmaTabs = myBulmaTabsContainer.getElementsByClassName('bulma-tab');
 
 	let n = myBulmaTabs.length;
-	let makeHandler = function(num) {
+	let makeTabButtonsHandler = function(num) {
 		// outer function
 		return function() {
 			// inner function
@@ -29,6 +29,6 @@
 		};
 	};
 	for (var i = 0; i < n; i++) {
-		myBulmaTabs[i].onclick = makeHandler(i + 1);
+		myBulmaTabs[i].onclick = makeTabButtonsHandler(i + 1);
 	}
 })();
